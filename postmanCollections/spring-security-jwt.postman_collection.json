@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "c3f524da-b479-44d0-81ed-ee3688fb661e",
+		"name": "spring-security-jwt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "12679400"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"loan@gmail.com\",\n    \"password\": \"12345\",\n    \"role\": \"ROLE_USER\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"admin@gmail.com\",\n    \"password\":\"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "api/admin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9BRE1JTiIsInN1YiI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTcyODIxNzYxNiwiZXhwIjoxNzI4MjIxMjE2fQ.1yY2cqJLaJaouwDarAVxX_OdwKxILPEpMrAWzh2XcWk"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/dashboard/"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/demo/mmessage",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiUk9MRV9BRE1JTiIsInN1YiI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTcyODIxNzYxNiwiZXhwIjoxNzI4MjIxMjE2fQ.1yY2cqJLaJaouwDarAVxX_OdwKxILPEpMrAWzh2XcWk"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/home"
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8085/logout"
+			},
+			"response": []
+		},
+		{
+			"name": "api/public",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/public"
+			},
+			"response": []
+		}
+	]
+}
