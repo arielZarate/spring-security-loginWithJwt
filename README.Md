@@ -19,15 +19,36 @@ Este proyecto implementa un sistema de autenticación y autorización utilizando
 - Java 17
 - Spring Boot
 - Spring Security
+- Spring Data Jpa
 - JWT (JSON Web Token)
 - Lombok
-- H2 Database (o MySQL)
+- Database MySQL
 - Maven
+- Dotenv
 
 ## Estructura del Proyecto
 
 ```bash
-com.arielZarate.springSecurityJwt ├── config │ ├── JwtTokenUtil.java │ ├── PasswordConfig.java │ └── WebSecurity.java ├── controllers │ └── AuthController.java ├── entity │ ├── AuthDetailModel.java │ ├── Role.java │ └── User.java ├── repository │ └── UserRepository.java └── services ├── AuthService.java └── UserDetailServiceImpl.java
+com.arielZarate.springSecurityJwt
+├── .env
+├── config
+│   ├── JwtTokenUtil.java
+│   ├── PasswordConfig.java
+│   └── WebSecurity.java
+├── controllers
+│   └── AuthController.java
+├── entity
+│   ├── AuthDetailModel.java
+│   ├── Role.java
+│   └── User.java
+├── repository
+│   └── UserRepository.java
+├── services
+│   ├── AuthService.java
+│   └── UserDetailServiceImpl.java
+└── utils
+    └── ValidateAuth.java
+
 ```
 
 ## Instalación
@@ -35,7 +56,7 @@ com.arielZarate.springSecurityJwt ├── config │ ├── JwtTokenUtil.ja
 1. **Clonar el repositorio:**
 
    ```bash
-   git clone https://github.com/tu_usuario/springSecurityJwt.git
+   git clone `https://github.com/arielZarate/spring-security-loginWithJwt.git`
    cd springSecurityJwt
 
    ```
